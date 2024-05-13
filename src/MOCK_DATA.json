@@ -1,0 +1,143 @@
+
+[
+  {
+    "Order_id": 1,
+    "Customer": "Dannye",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$5387.73"
+  },
+  {
+    "Order_id": 2,
+    "Customer": "Lamond",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$25594.11"
+  },
+  {
+    "Order_id": 3,
+    "Customer": "Bea",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$634.73"
+  },
+  {
+    "Order_id": 4,
+    "Customer": "Star",
+    "Fulfillment state": false,
+    "Payment Status": "cancelled",
+    "Total": "$24952.07"
+  },
+  {
+    "Order_id": 5,
+    "Customer": "Dominique",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$4394.50"
+  },
+  {
+    "Order_id": 6,
+    "Customer": "Obie",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$13469.78"
+  },
+  {
+    "Order_id": 7,
+    "Customer": "Lenna",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$2098.06"
+  },
+  {
+    "Order_id": 8,
+    "Customer": "Lonnie",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$616.32"
+  },
+  {
+    "Order_id": 9,
+    "Customer": "Lawry",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$25038.35"
+  },
+  {
+    "Order_id": 10,
+    "Customer": "Crysta",
+    "Fulfillment state": false,
+    "Payment Status": "cancelled",
+    "Total": "$19407.86"
+  },
+  {
+    "Order_id": 11,
+    "Customer": "Drud",
+    "Fulfillment state": false,
+    "Payment Status": "cancelled",
+    "Total": "$32679.34"
+  },
+  {
+    "Order_id": 12,
+    "Customer": "Frannie",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": null
+  },
+  {
+    "Order_id": 13,
+    "Customer": "Idette",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$17160.01"
+  },
+  {
+    "Order_id": 14,
+    "Customer": "Marshal",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$47416.55"
+  },
+  {
+    "Order_id": 15,
+    "Customer": "Drucy",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$17264.51"
+  },
+  {
+    "Order_id": 16,
+    "Customer": "Kirsten",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$15103.54"
+  },
+  {
+    "Order_id": 17,
+    "Customer": "Cindelyn",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$4671.89"
+  },
+  {
+    "Order_id": 18,
+    "Customer": "Melisent",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": "$16326.66"
+  },
+  {
+    "Order_id": 19,
+    "Customer": "Dimitri",
+    "Fulfillment state": false,
+    "Payment Status": "refunded",
+    "Total": null
+  },
+  {
+    "Order_id": 20,
+    "Customer": "Ellis",
+    "Fulfillment state": true,
+    "Payment Status": "paid fully",
+    "Total": "$24020.84"
+  }
+]
