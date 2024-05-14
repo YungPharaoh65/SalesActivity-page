@@ -71,8 +71,51 @@ function Header(){
 
            
             <div className={styles.move21}>
-            <div className={styles.box71}> <h3>Purchase order</h3> <p></p></div>
+            <div className={styles.box71}> <h3>Purchase order</h3> 
+            <p className={styles.topic2}>Received Orders</p>
+            <p className={styles.topic2}>Total cost (USD)</p>
+            
+
+            <div className={styles.number2}>
+            <p className={styles.receivedOrders}>$25 00</p>
+            <p className={styles.totalCost}>$25 00</p>
             </div>
+
+            
+
+
+            <h3>Incoming purchase orders</h3>
+
+            {/* This is grouuped by the way*/}
+            <p className={styles.topic3}> 🟧 - # P0005 </p>
+            <p className={styles.topic33}> Ernest Garbon </p>
+
+            <p className={styles.topic3}> 🟦 - # P0005 </p>
+            <p className={styles.topic33}> Ernest Garbon </p>
+
+            <p className={styles.topic3}> 🟪 - # P0005 </p>
+            <p className={styles.topic33}> Ernest Garbon </p>
+
+            <p className={styles.topic3}> 🟥 - # P0005 </p>
+            <p className={styles.topic33}> Ernest Garbon </p>
+            
+            
+            <div className={styles.number3}>
+            <p className={styles.incomingAmount}>$25 00</p>
+            <p className={styles.incomingAmount}>$25 00</p>
+            
+            
+            <p className={styles.spaceAmount}>$25 00</p>
+            <p className={styles.spaceAmount}>$25 00</p>
+            </div>
+
+           <p className={styles.topic22}>view all</p>
+            </div>
+
+           
+            
+            </div>
+            
 
           
            {/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}
