@@ -9,11 +9,11 @@ function Stock() {
     const data = useMemo(() => mData, []);
     const columns = useMemo(
         () => [
-            { Header: 'Order ID', accessor: 'Order_id' },
-            { Header: 'Customer', accessor: 'Customer' },
-            { Header: 'Fulfillment State', accessor: 'Fulfillment state', Cell: ({ value }) => value ? 'Fulfilled' : 'Unfulfilled' },
-            { Header: 'Payment Status', accessor: 'Payment Status' },
-            { Header: 'Total', accessor: 'Total' }
+            { Header: 'Order ID', accessoryKey: 'Order_id' },
+            { Header: 'Customer', accessoryKey: 'Customer' },
+            { Header: 'Fulfillment State', accessoryKey: 'Fulfillment state', Cell: ({ value }) => value ? 'Fulfilled' : 'Unfulfilled' },
+            { Header: 'Payment Status', accessoryKey: 'Payment Status' },
+            { Header: 'Total', accessoryKey: 'Total' }
         ],
         []
     );
