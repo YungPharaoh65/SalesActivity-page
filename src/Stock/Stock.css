@@ -2,11 +2,13 @@
 .stock-table {
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .stock-table table {
     width: 100%;
     border-collapse: collapse;
+    overflow-y: auto;
 }
 
 .stock-table th,
@@ -76,8 +78,6 @@
     color: #e7d1d1;
 }
 
-.searchbar{
-    
-}
+
 
 

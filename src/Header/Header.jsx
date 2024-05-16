@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 
 // ERROR AT LINE 58 :-(
 
-function Header(){
+function Header(totalCost){
 
 
     
@@ -56,8 +56,9 @@ function Header(){
 
             <br />
             <div className={styles.box66}>
+                
                 <Stock/>   {/*WHENEVER I ADD THE <Stock/> LINE, THE WHOLE PAGE DISSAPEARS...WHenever tanstack touches it*/}
-            
+            <br /> <br />
             </div>
 
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
@@ -78,8 +79,8 @@ function Header(){
             
 
             <div className={styles.number2}>
-            <p className={styles.receivedOrders}>$25 00</p>
-            <p className={styles.totalCost}>$25 00</p>
+            <p className={styles.receivedOrders}>$25 000</p>
+            <p className={styles.totalCost}>$ 50</p>
             </div>
 
             

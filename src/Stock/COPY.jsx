@@ -1,3 +1,7 @@
+//This is the tanstack library that should show up on the page
+//This is the tanstack library that should show up on the page
+//This is the tanstack library that should show up on the page
+
 import styles from './Stock.module.css';
 import mData from '../MOCK_DATA.json';
 import { useReactTable, flexRender, getCoreRowModel } from '@tanstack/react-table';

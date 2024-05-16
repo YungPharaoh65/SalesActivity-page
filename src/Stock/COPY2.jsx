@@ -1,9 +1,13 @@
+//this is the MOD DISPLAYED THAT SHOWS
+//this is the MOD DISPLAYED THAT SHOWS//this is the MOD DISPLAYED THAT SHOWS currently
+
 import React from 'react';
 import MOCK_DATA from '../MOCK_DATA.json'; // Import mock data file
 import './Stock.css';
 
-function Stock({ totalCost }) { // Receive totalCost as a prop
+function Stock(totalCost) { // Receive totalCost as a prop
 
+    
     return (
         <div className="stock-table">
             <table>
@@ -16,7 +20,7 @@ function Stock({ totalCost }) { // Receive totalCost as a prop
                         <th>Total</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  >
                     {MOCK_DATA.map(order => (
                         <tr key={order.Order_id}>
                             <td>{order.Order_id}</td>
@@ -39,3 +43,6 @@ function Stock({ totalCost }) { // Receive totalCost as a prop
 }
 
 export default Stock;
+
+
+

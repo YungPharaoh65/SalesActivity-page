@@ -139,5 +139,145 @@
     "Fulfillment state": true,
     "Payment Status": "paid fully",
     "Total": "$24020.84"
-  }
+  },
+  {
+    "Order_id": 21,
+    "Customer": "Wylie",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": null
+},
+{
+    "Order_id": 22,
+    "Customer": "Basile",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": "$13258.38"
+},
+{
+    "Order_id": 23,
+    "Customer": "Joline",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$48998.18"
+},
+{
+    "Order_id": 24,
+    "Customer": "Edgardo",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$23044.02"
+},
+{
+    "Order_id": 25,
+    "Customer": "Leo",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$7408.52"
+},
+{
+    "Order_id": 26,
+    "Customer": "Noelani",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$32264.31"
+},
+{
+    "Order_id": 27,
+    "Customer": "Nil",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$17724.33"
+},
+{
+    "Order_id": 28,
+    "Customer": "Carena",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": null
+},
+{
+    "Order_id": 29,
+    "Customer": "Eddie",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": null
+},
+{
+    "Order_id": 30,
+    "Customer": "Fannie",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$37761.42"
+},
+{
+    "Order_id": 31,
+    "Customer": "Nananne",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": null
+},
+{
+    "Order_id": 32,
+    "Customer": "Xerxes",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$34671.44"
+},
+{
+    "Order_id": 33,
+    "Customer": "Darin",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": "$47427.48"
+},
+{
+    "Order_id": 34,
+    "Customer": "Allistir",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": "$6560.12"
+},
+{
+    "Order_id": 35,
+    "Customer": "Chrisy",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$39067.34"
+},
+{
+    "Order_id": 36,
+    "Customer": "Vittoria",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$35474.43"
+},
+{
+    "Order_id": 37,
+    "Customer": "Cullie",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$10630.01"
+},
+{
+    "Order_id": 38,
+    "Customer": "Marnie",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$29365.60"
+},
+{
+    "Order_id": 39,
+    "Customer": "Hatty",
+    "Fulfillment state": true,
+    "Payment Status": null,
+    "Total": "$6975.14"
+},
+{
+    "Order_id": 40,
+    "Customer": "Ara",
+    "Fulfillment state": false,
+    "Payment Status": null,
+    "Total": "$32976.90"
+}
 ]
