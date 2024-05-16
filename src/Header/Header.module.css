@@ -181,7 +181,7 @@ h1{
  /*Latest sale orders-by sales channel*//*Latest sale orders-by sales channel*//*Latest sale orders-by sales channel*/
 /*Latest sale orders-by sales channel*//*Latest sale orders-by sales channel*//*Latest sale orders-by sales channel*/
 
- .box66{
+.box66 {
     width: 55rem;
     height: 30rem;
     margin-left: 3rem;
@@ -190,6 +190,9 @@ h1{
     border-radius: 1rem;
     overflow-y: auto;
 }
+
+
+
 
   
 

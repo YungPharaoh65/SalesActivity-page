@@ -1,6 +1,6 @@
-import {useReactTable, getCoreRowModel, flexRender} from '@tanstack/react-table'
-import styles from './Header.module.css'
 import Stock from '../Stock/Stock.jsx';
+import styles from './Header.module.css'
+
 
 
 // ERROR AT LINE 58 :-(
@@ -55,7 +55,8 @@ function Header(){
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
 
             <br />
-            <div className={styles.box66}>   {/*WHENEVER I ADD THE <Stock/> LINE, THE WHOLE PAGE DISSAPEARS...WHY???*/}
+            <div className={styles.box66}>
+                <Stock/>   {/*WHENEVER I ADD THE <Stock/> LINE, THE WHOLE PAGE DISSAPEARS...WHenever tanstack touches it*/}
             
             </div>
 

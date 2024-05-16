@@ -1,53 +1,100 @@
-import styles from './Stock.module.css';
-import mData from '../MOCK_DATA.json';
-import { useReactTable, flexRender, getCoreRowModel } from '@tanstack/react-table';
-import { useMemo } from 'react';
-
+import React from 'react';
+import './Stock.css';
 
 function Stock() {
-    // Define your data and columns
-    const data = useMemo(() => mData, []);
-    const columns = useMemo(
-        () => [
-            { Header: 'Order ID', accessoryKey: 'Order_id' },
-            { Header: 'Customer', accessoryKey: 'Customer' },
-            { Header: 'Fulfillment State', accessoryKey: 'Fulfillment state', Cell: ({ value }) => value ? 'Fulfilled' : 'Unfulfilled' },
-            { Header: 'Payment Status', accessoryKey: 'Payment Status' },
-            { Header: 'Total', accessoryKey: 'Total' }
-        ],
-        []
-    );
-
-    // Use the useReactTable hook to manage data and columns
-    const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() });
-
     return (
-        <div className={styles.stock}>
+
+        
+        <div className="stock-table">
+            
             <table>
                 <thead>
-                    {table.getHeaderGroups().map(headerGroup => (
-                        <tr key={headerGroup.id}>
-                            {headerGroup.headers.map(header => (
-                                <th key={header.id}>
-                                    {flexRender(header.column.columnDef.header, header.getContext())}
-                                </th>
-                            ))}
-                        </tr>
-                    ))}
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th className='fulfillmentstat'>Fulfillment State</th>
+                        <th  className='paymentstat'>Payment Status</th>
+                        <th>Total</th>
+                    </tr>
+                  
                 </thead>
+
+               
+
                 <tbody>
-                    {table.getRowModel().rows.map(row => (
-                        <tr key={row.id}>
-                            {row.getVisibleCells().map(cell => (
-                                <td key={cell.id}>
-                                    {flexRender(cell.column.columnDef.Cell, cell.getContext())}
-                                </td>
-                            ))}
-                        </tr>
-                    ))}
+                    <tr>
+                        <td>12345</td>
+                        <td>John Doe</td>
+                        <td ><p className='fulfil'>fulfilled</p></td>
+                        <td className='complete'>Fully Paid</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Jane Smith</td>
+                        <td><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='incomplete'>Incomplete</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>54321</td>
+                        <td>Michael Johnson</td>
+                        <td ><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='halfway'>Halfway</td>
+                        <td>$75.00</td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Jane Smith</td>
+                        <td><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='incomplete'>Incomplete</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Jane Smith</td>
+                        <td><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='incomplete'>Incomplete</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>12345</td>
+                        <td>John Doe</td>
+                        <td ><p className='fulfil'>fulfilled</p></td>
+                        <td className='complete'>Fully Paid</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>54321</td>
+                        <td>Michael Johnson</td>
+                        <td ><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='halfway'>Halfway</td>
+                        <td>$75.00</td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Jane Smith</td>
+                        <td><p className='unfulfil'>Unfulfilled</p></td>
+                        <td className='incomplete'>Incomplete</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>12345</td>
+                        <td>John Doe</td>
+                        <td ><p className='fulfil'>fulfilled</p></td>
+                        <td className='complete'>Fully Paid</td>
+                        <td>$100.00</td>
+                    </tr>
+                    
+
+                    
+
+                    
+                    {/* Add more rows as needed */}
                 </tbody>
-                {/* If you want a footer, you can add it here */}
             </table>
+
+            
         </div>
     );
 }
