@@ -102,11 +102,12 @@ h1{
     height: 10rem;
     margin-left: 22rem;
     padding-top: -2rem;
-    margin-top: -10rem;
+    margin-top: -12rem;
     background-color: rgb(255, 255, 255);
     font-weight: 900;
     border-radius: 1rem;  
 }
+
 .smallbox21{
     width: 2.2rem;
     height: 2.2rem;
@@ -117,15 +118,18 @@ h1{
 
 
 
+
+
 .box31{
     width: 20rem;
     height: 10rem;
     margin-left: 41rem;
-    margin-top: -10rem;
+    margin-top: -12.1rem;
     background-color: rgb(255, 255, 255);
     font-weight: 900;
     border-radius: 1rem;
 }
+
 .smallbox31{
     width: 2.2rem;
     height: 2.2rem;
@@ -138,7 +142,7 @@ h1{
     width: 19rem;
     height: 10rem;
     margin-left: 62rem;
-    margin-top: -10rem;
+    margin-top: -12.1rem;
     background-color: rgb(255, 255, 255);
     font-weight: 900;
     border-radius: 1rem;
@@ -171,9 +175,7 @@ h1{
    margin-bottom: .2rem;   
 }
 
-.move21{
-    margin-top: -11rem;
-}
+
 
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -244,11 +246,26 @@ p{
     margin-left: 14rem;
 }
 
-.totalCost{
+.totalCost {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     margin-left: 14rem;
+    max-width: 100px; /* Adjust as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+
+.totalCost:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+}
+
+
 
 
 
@@ -281,6 +298,15 @@ p{
     margin-left: 14rem;
    padding-top: 1rem;
 }
+
+.move21{
+    margin-top: 1rem;
+}
+
+.move222{
+    margin-top: 35rem;
+}
+
 
 
 

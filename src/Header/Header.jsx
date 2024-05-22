@@ -1,13 +1,13 @@
-import Stock from '../Stock/Stock.jsx';
+
 import styles from './Header.module.css'
-
-
 
 // ERROR AT LINE 58 :-(
 
-function Header(totalCost){
+function Header({ totalCost }){
+  
 
 
+    
     
     return(
 
@@ -18,17 +18,21 @@ function Header(totalCost){
             <h1>Sales Activity for this week: </h1>
 
             <div className={styles.box1}><p className={styles.text1}>To be Furfilled: <p className={styles.number}>98</p> Quantity</p></div>
+
+            <div className={styles.moveyellow}>
+            <div className={styles.move2}>
             
+                <div className={styles.box2}><p className={styles.text1}>To be Invoiced: <p className={styles.number}>98</p> Quantity</p> </div>
+            </div>
+            </div> 
+
+
             <div className={styles.move2}>
-            <div className={styles.box2}><p className={styles.text1}>To be Invoiced: <p className={styles.number}>98</p> Quantity</p> </div>
+                <div className={styles.box3}><p className={styles.text1}>Completed: <p className={styles.number}>98</p> Quantity</p> </div>
             </div>
 
             <div className={styles.move2}>
-            <div className={styles.box3}><p className={styles.text1}>Completed: <p className={styles.number}>98</p> Quantity</p> </div>
-            </div>
-
-            <div className={styles.move2}>
-            <div className={styles.box4}><p className={styles.text1}>Assigned To me: <p className={styles.number}>98</p> Quantity</p> </div>
+                <div className={styles.box4}><p className={styles.text1}>Assigned To me: <p className={styles.number}>98</p> Quantity</p> </div>
             </div>
 
             {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}
@@ -54,12 +58,10 @@ function Header(totalCost){
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
 
-            <br />
-            <div className={styles.box66}>
-                
-                <Stock/>   {/*WHENEVER I ADD THE <Stock/> LINE, THE WHOLE PAGE DISSAPEARS...WHenever tanstack touches it*/}
-            <br /> <br />
-            </div>
+
+            
+           
+            
 
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
             {/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}{/*Latest sale orders-by sales channel*/}
@@ -72,7 +74,7 @@ function Header(totalCost){
 
 
            
-            <div className={styles.move21}>
+            <div className={styles.move222}>
             <div className={styles.box71}> <h3>Purchase order</h3> 
             <p className={styles.topic2}>Received Orders</p>
             <p className={styles.topic2}>Total cost (USD)</p>
@@ -80,7 +82,7 @@ function Header(totalCost){
 
             <div className={styles.number2}>
             <p className={styles.receivedOrders}>$25 000</p>
-            <p className={styles.totalCost}>$ 50</p>
+            <p className={styles.totalCost}>${totalCost.toFixed(2)}</p> {/* how do i connect this on Header component to the total added amount from order.total on the Stock component on jsx*/}
             </div>
 
             
