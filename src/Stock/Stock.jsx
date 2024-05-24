@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MOCK_DATA from "../MOCK_DATA.json";
 import "./Stock.css";
 
-function Stock({ setTotalCost }) {
+function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalOrders }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [customerSearchQuery, setCustomerSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState(MOCK_DATA);
@@ -26,10 +26,8 @@ function Stock({ setTotalCost }) {
       return (
         lowerCaseQuery === "" ||
         fulfillmentState.toLowerCase() === lowerCaseQuery
-        
       );
     });
-
 
     setFilteredData(filtered);
   }, [searchQuery]);
@@ -46,10 +44,19 @@ function Stock({ setTotalCost }) {
     setFilteredData(filtered);
   }, [customerSearchQuery]);
 
+  useEffect(() => {
+    const unfulfilledOrders = MOCK_DATA.filter(order => !order["Fulfillment state"]);
+    const fulfilledOrders = MOCK_DATA.filter(order => order["Fulfillment state"]);
+    const uniqueUnfulfilledCustomers = [...new Set(unfulfilledOrders.map(order => order.Customer))];
+    const uniqueFulfilledCustomers = [...new Set(fulfilledOrders.map(order => order.Customer))];
+    setUnfulfilledCount(uniqueUnfulfilledCustomers.length);
+    setFulfilledCount(uniqueFulfilledCustomers.length);
+    setTotalOrders(MOCK_DATA.length);
+  }, [setUnfulfilledCount, setFulfilledCount, setTotalOrders]);
+
   return (
     <div className="box66">
       <div className="stock-table">
-
         <div className="moveinput">
           <input
             type="text"
@@ -57,9 +64,7 @@ function Stock({ setTotalCost }) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-
           <br />
-
           <input
             type="text"
             placeholder="Search by customer..."
@@ -67,7 +72,6 @@ function Stock({ setTotalCost }) {
             onChange={(e) => setCustomerSearchQuery(e.target.value)}
           />
         </div>
-
         <table>
           <thead>
             <tr>
@@ -79,7 +83,6 @@ function Stock({ setTotalCost }) {
             </tr>
           </thead>
           <tbody>
-
             {filteredData.length > 0 ? (
               filteredData.map((order) => (
                 <tr key={order.Order_id}>
@@ -92,10 +95,8 @@ function Stock({ setTotalCost }) {
                       }
                     >
                       {order["Fulfillment state"] ? "fulfilled" : "unfulfilled"}
-
                     </p>
                   </td>
-
                   <td
                     className={
                       order["Payment Status"] === "paid fully"
@@ -108,7 +109,6 @@ function Stock({ setTotalCost }) {
                   <td>{order.Total}</td>
                 </tr>
               ))
-              
             ) : (
               <tr>
                 <td colSpan="5" style={{ textAlign: "center" }}>
@@ -116,7 +116,6 @@ function Stock({ setTotalCost }) {
                 </td>
               </tr>
             )}
-
           </tbody>
         </table>
       </div>
