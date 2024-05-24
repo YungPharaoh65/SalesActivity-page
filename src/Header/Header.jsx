@@ -29,7 +29,7 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }){
             </div>
 
             <div className={styles.move2}>
-                <div className={styles.box4}><p className={styles.text1}>Assigned To me: <p className={styles.number}>{totalOrders}</p> Quantity</p> </div>
+                <div className={styles.box4}><p className={styles.text1}>Assigned To me: <p className={styles.number}>{totalOrders}</p> Quantity/s</p> </div>
             </div>
 
             {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}  {/* Second Row Boxes  with Info */}
@@ -88,16 +88,16 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }){
             <h3>Incoming purchase orders</h3>
 
             {/* This is grouuped by the way*/}
-            <p className={styles.topic3}> 🟧 - # P0005 </p>
+            <p className={styles.topic3}> 🟧 - # 51- Henrik </p>
             <p className={styles.topic33}> Ernest Garbon </p>
 
-            <p className={styles.topic3}> 🟦 - # P0005 </p>
+            <p className={styles.topic3}> 🟦 - # 13 - Idette </p>
             <p className={styles.topic33}> Ernest Garbon </p>
 
-            <p className={styles.topic3}> 🟪 - # P0005 </p>
+            <p className={styles.topic3}> 🟪 - # 22 - Basile </p>
             <p className={styles.topic33}> Ernest Garbon </p>
 
-            <p className={styles.topic3}> 🟥 - # P0005 </p>
+            <p className={styles.topic3}> 🟥 - # 105 - Xena </p>
             <p className={styles.topic33}> Ernest Garbon </p>
             
             
@@ -113,10 +113,13 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }){
            <p className={styles.topic22}>view all</p>
             </div>
 
+
+
            
             
             </div>
             
+
 
           
            {/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}{/*Purchase Orders*/}

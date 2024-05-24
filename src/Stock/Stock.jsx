@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import MOCK_DATA from "../MOCK_DATA.json";
 import "./Stock.css";
 
-function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalOrders }) {
+function Stock({
+  setTotalCost,
+  setUnfulfilledCount,
+  setFulfilledCount,
+  setTotalOrders,
+}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [customerSearchQuery, setCustomerSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState(MOCK_DATA);
@@ -45,10 +50,20 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
   }, [customerSearchQuery]);
 
   useEffect(() => {
-    const unfulfilledOrders = MOCK_DATA.filter(order => !order["Fulfillment state"]);
-    const fulfilledOrders = MOCK_DATA.filter(order => order["Fulfillment state"]);
-    const uniqueUnfulfilledCustomers = [...new Set(unfulfilledOrders.map(order => order.Customer))];
-    const uniqueFulfilledCustomers = [...new Set(fulfilledOrders.map(order => order.Customer))];
+    const unfulfilledOrders = MOCK_DATA.filter(
+      (order) => !order["Fulfillment state"]
+    );
+    const fulfilledOrders = MOCK_DATA.filter(
+      (order) => order["Fulfillment state"]
+    );
+
+    const uniqueUnfulfilledCustomers = [
+      ...new Set(unfulfilledOrders.map((order) => order.Customer)),
+    ];
+    const uniqueFulfilledCustomers = [
+      ...new Set(fulfilledOrders.map((order) => order.Customer)),
+    ];
+
     setUnfulfilledCount(uniqueUnfulfilledCustomers.length);
     setFulfilledCount(uniqueFulfilledCustomers.length);
     setTotalOrders(MOCK_DATA.length);
@@ -57,29 +72,32 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
   return (
     <div className="box66">
       <div className="stock-table">
+        
         <div className="moveinput">
           <input
             type="text"
-            placeholder="Search by fulfillment state..."
+            className="fulfillment_state"
+            placeholder="Search by fulfillment state...🔎 fulfilled OR unfulfilled"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <br />
           <input
             type="text"
-            placeholder="Search by customer..."
+            placeholder="Search by customer...🔎 (type the name on 'customer')"
             value={customerSearchQuery}
             onChange={(e) => setCustomerSearchQuery(e.target.value)}
           />
         </div>
+
         <table>
           <thead>
             <tr>
-              <th>Order ID</th>
+              <th className="orderID">Order ID</th>
               <th>Customer</th>
               <th className="fulfillmentstat">Fulfillment State</th>
               <th className="paymentstat">Payment Status</th>
-              <th>Total</th>
+              <th className="total">Total</th>
             </tr>
           </thead>
           <tbody>
@@ -112,7 +130,7 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
             ) : (
               <tr>
                 <td colSpan="5" style={{ textAlign: "center" }}>
-                  Nobody exists of that sort
+                  source does not exist
                 </td>
               </tr>
             )}

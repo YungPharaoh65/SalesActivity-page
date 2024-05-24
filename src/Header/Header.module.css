@@ -243,13 +243,13 @@ p{
 .receivedOrders{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
-    margin-left: 14rem;
+    margin-left: 11rem;
 }
 
 .totalCost {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
-    margin-left: 14rem;
+    margin-left: 11rem;
     max-width: 100px; /* Adjust as needed */
     overflow: hidden;
     text-overflow: ellipsis;

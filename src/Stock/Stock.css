@@ -11,7 +11,7 @@
     background-color: rgb(87, 74, 74);
     font-weight: 900;
     border-radius: 1rem;
-    margin-top: -45rem;
+    margin-top: -40rem;
     overflow-y: transparent;
 }
 
@@ -32,6 +32,16 @@
     top: 0; /* Stick to the top */
     z-index: 1; /* Ensure it's above other elements */
 }
+
+.orderID{border-top-left-radius: 1rem;
+}
+
+.total{
+    border-top-right-radius: 1rem;
+}
+
+
+
 
 .box {
     background-color: #8d5252;
@@ -83,16 +93,27 @@
 }
 
 .moveinput{
-    margin-top: .5rem;
-    
+   padding-top: -15.5rem;
+   margin-top: -5rem;
+   position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it's above other elements */
 }
 
 input{
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     border: none;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin-top: .5rem;
+    margin-left: 58rem;
+    width: 22rem;
+
+    outline-color: green;
 }
+
+
+
 
 
 
