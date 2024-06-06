@@ -112,7 +112,27 @@ input{
     outline-color: green;
 }
 
+.deleteBtn{
+    background-color: red;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    width: 4rem;
+    font-weight: 800;
+    height: 2rem;
 
+}
+
+.deleteBtn:hover{
+    color: black;
+    background-color: #8d5252;
+}
+
+.dragging {
+    border: 2px dashed #007bff;
+    background-color: #f1f1f1;
+  }
+  
 
 
 

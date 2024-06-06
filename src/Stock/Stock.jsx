@@ -1,40 +1,37 @@
+// Stock.jsx
 import React, { useEffect, useState } from "react";
 import MOCK_DATA from "../MOCK_DATA.json";
 import "./Stock.css";
 
-function Stock({
-  setTotalCost,
-  setUnfulfilledCount,
-  setFulfilledCount,
-  setTotalOrders,
-}) {
+function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalOrders }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [customerSearchQuery, setCustomerSearchQuery] = useState("");
-  const [filteredData, setFilteredData] = useState(MOCK_DATA);
+  const [filteredData, setFilteredData] = useState(() => {
+
+    // Retrieve filtered data from local storage, or use MOCK_DATA if it doesn't exist
+    const storedData = localStorage.getItem("filteredData");
+    return storedData ? JSON.parse(storedData) : [...MOCK_DATA];
+    
+  });
 
   useEffect(() => {
-    // Calculate the total cost, stripping the dollar sign before parsing
-    const total = MOCK_DATA.reduce((acc, order) => {
+    const total = filteredData.reduce((acc, order) => {
       const amount = parseFloat(order.Total.replace(/[^0-9.-]+/g, "")) || 0;
       return acc + amount;
     }, 0);
     setTotalCost(total);
-  }, [setTotalCost]);
+  }, [filteredData, setTotalCost]);
 
   useEffect(() => {
     const lowerCaseQuery = searchQuery.toLowerCase();
-
     const filtered = MOCK_DATA.filter((order) => {
-      const fulfillmentState = order["Fulfillment state"]
-        ? "fulfilled"
-        : "unfulfilled";
+      const fulfillmentState = order["Fulfillment state"] ? "fulfilled" : "unfulfilled";
       return (
-        lowerCaseQuery === "" ||
-        fulfillmentState.toLowerCase() === lowerCaseQuery
+        lowerCaseQuery === "" || fulfillmentState.toLowerCase() === lowerCaseQuery
       );
     });
-
     setFilteredData(filtered);
+    localStorage.setItem("filteredData", JSON.stringify(filtered)); // Store filtered data in local storage
   }, [searchQuery]);
 
   useEffect(() => {
@@ -42,37 +39,34 @@ function Stock({
     const filtered = MOCK_DATA.filter((order) => {
       const customerName = order.Customer.toLowerCase();
       return (
-        lowerCaseCustomerQuery === "" ||
-        customerName.includes(lowerCaseCustomerQuery)
+        lowerCaseCustomerQuery === "" || customerName.includes(lowerCaseCustomerQuery)
       );
     });
     setFilteredData(filtered);
+    localStorage.setItem("filteredData", JSON.stringify(filtered)); // Store filtered data in local storage
   }, [customerSearchQuery]);
 
   useEffect(() => {
-    const unfulfilledOrders = MOCK_DATA.filter(
-      (order) => !order["Fulfillment state"]
-    );
-    const fulfilledOrders = MOCK_DATA.filter(
-      (order) => order["Fulfillment state"]
-    );
+    const unfulfilledOrders = filteredData.filter((order) => !order["Fulfillment state"]);
+    const fulfilledOrders = filteredData.filter((order) => order["Fulfillment state"]);
 
-    const uniqueUnfulfilledCustomers = [
-      ...new Set(unfulfilledOrders.map((order) => order.Customer)),
-    ];
-    const uniqueFulfilledCustomers = [
-      ...new Set(fulfilledOrders.map((order) => order.Customer)),
-    ];
+    const uniqueUnfulfilledCustomers = [...new Set(unfulfilledOrders.map((order) => order.Customer))];
+    const uniqueFulfilledCustomers = [...new Set(fulfilledOrders.map((order) => order.Customer))];
 
     setUnfulfilledCount(uniqueUnfulfilledCustomers.length);
     setFulfilledCount(uniqueFulfilledCustomers.length);
-    setTotalOrders(MOCK_DATA.length);
-  }, [setUnfulfilledCount, setFulfilledCount, setTotalOrders]);
+    setTotalOrders(filteredData.length);
+  }, [filteredData, setUnfulfilledCount, setFulfilledCount, setTotalOrders]);
+
+  const deleteCustomer = (orderId) => {
+    const updatedData = filteredData.filter(order => order.Order_id !== orderId);
+    setFilteredData(updatedData);
+    localStorage.setItem("filteredData", JSON.stringify(updatedData)); // Update filtered data in local storage
+  };
 
   return (
     <div className="box66">
       <div className="stock-table">
-        
         <div className="moveinput">
           <input
             type="text"
@@ -89,7 +83,6 @@ function Stock({
             onChange={(e) => setCustomerSearchQuery(e.target.value)}
           />
         </div>
-
         <table>
           <thead>
             <tr>
@@ -97,7 +90,8 @@ function Stock({
               <th>Customer</th>
               <th className="fulfillmentstat">Fulfillment State</th>
               <th className="paymentstat">Payment Status</th>
-              <th className="total">Total</th>
+              <th >Total</th>
+              <th className="total"></th> {/* Add Action column for delete button */}
             </tr>
           </thead>
           <tbody>
@@ -107,29 +101,22 @@ function Stock({
                   <td>{order.Order_id}</td>
                   <td>{order.Customer}</td>
                   <td>
-                    <p
-                      className={
-                        order["Fulfillment state"] ? "fulfil" : "unfulfil"
-                      }
-                    >
+                    <p className={order["Fulfillment state"] ? "fulfil" : "unfulfil"}>
                       {order["Fulfillment state"] ? "fulfilled" : "unfulfilled"}
                     </p>
                   </td>
-                  <td
-                    className={
-                      order["Payment Status"] === "paid fully"
-                        ? "complete"
-                        : "incomplete"
-                    }
-                  >
+                  <td className={order["Payment Status"] === "paid fully" ? "complete" : "incomplete"}>
                     {order["Payment Status"]}
                   </td>
                   <td>{order.Total}</td>
+                  <td>
+                    <button className="deleteBtn" onClick={() => deleteCustomer(order.Order_id)}>x</button>
+                  </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="5" style={{ textAlign: "center" }}>
+                <td colSpan="6" style={{ textAlign: "center" }}>
                   source does not exist
                 </td>
               </tr>
