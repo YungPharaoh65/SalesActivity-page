@@ -20,89 +20,125 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }) {
 
     return (
         <header>
-            <br /><br />
-            <h1>Sales Activity for this week:</h1>
-
-            <div className={styles.box1}>
-                <p className={styles.text1}>
-                    UnFulfilled Orders:
-                    <span className={styles.number}>{unfulfilledCount}</span>
-                    Quantity/s
-                </p>
-            </div>
-
-            <div className={styles.moveyellow}>
-                <div className={styles.move2}>
-                    <div className={styles.box2}>
-                        <p className={styles.text1}>
-                            To be Invoiced:
-                            <span className={styles.number}>{fulfilledCount}</span>
-                            Quantity/s
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className={styles.move2}>
-                <div className={styles.box3}>
-                    <p className={styles.text1}>
-                        Fulfilled Orders:
-                        <span className={styles.number}>{fulfilledCount}</span>
-                        Quantity/s
-                    </p>
-                </div>
-            </div>
-
-            <div className={styles.move2}>
-                <div className={styles.box4}>
-                    <p className={styles.text1}>
-                        Assigned To me:
-                        <span className={styles.number}>{totalOrders}</span>
-                        Quantity/s
-                    </p>
-                </div>
-            </div>
-
-            <br />
-            <div className={styles.box11}>
-                <div className={styles.smallbox11}></div>
-                <p className={styles.text11}>
-                    Out of stock products
-                    <span className={styles.number1}>N/A</span>
-                </p>
-            </div>
-            <br />
-            <div className={styles.move21}>
-                <div className={styles.box21}>
-                    <div className={styles.smallbox21}></div>
-                    <p className={styles.text11}>
-                        All products
-                        <span className={styles.number1}>N/A</span>
-                    </p>
-                </div>
-            </div>
-            <br />
-            <div className={styles.move21}>
-                <div className={styles.box31}>
-                    <div className={styles.smallbox31}></div>
-                    <p className={styles.text11}>
-                        Archived products
-                        <span className={styles.number1}>N/A</span>
-                    </p>
-                </div>
-            </div>
-            <br />
-            <div className={styles.move21}>
-                <div className={styles.box41}>
-                    <div className={styles.smallbox41}></div>
-                    <p className={styles.text11}>
-                        Quantity On Hand
-                        <span className={styles.number1}>{totalOrders}</span>
-                    </p>
-                </div>
-            </div>
-
-            <br />
+            
+      <h1>Sales Activity For: </h1>
+      <div className={styles.box1}>
+        <p className={styles.text1}>
+          UnFurfilled Orders:{" "}
+          <p className={styles.number}>{unfulfilledCount}</p> Quantity/s
+        </p>
+      </div>
+      <div className={styles.moveyellow}>
+        <div className={styles.move2}>
+          <div className={styles.box2}>
+            <p className={styles.text1}>
+              To be Invoiced: <p className={styles.number}>{fulfilledCount}</p>{" "}
+              Quantity/s
+            </p>{" "}
+          </div>
+        </div>
+      </div>
+      <div className={styles.move2}>
+        <div className={styles.box3}>
+          <p className={styles.text1}>
+            Fulfilled Orders: <p className={styles.number}>{fulfilledCount}</p>{" "}
+            Quantity/s
+          </p>{" "}
+        </div>
+      </div>
+      <div className={styles.move2}>
+        <div className={styles.box4}>
+          <p className={styles.text1}>
+            Assigned To me: <p className={styles.number}>{totalOrders}</p>{" "}
+            Quantity/s
+          </p>{" "}
+        </div>
+      </div>
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */}
+      <br />
+      <div className={styles.box11}>
+        <div className={styles.smallbox11}></div>{" "}
+        <p className={styles.text11}>
+          Out of stock products <p className={styles.number1}>N/A</p>{" "}
+        </p>
+      </div>
+      <br />
+      <div className={styles.move21}>
+        <div className={styles.box21}>
+          <div className={styles.smallbox21}></div>
+          <p className={styles.text11}>
+            All products <p className={styles.number1}>N/A</p>{" "}
+          </p>{" "}
+        </div>
+      </div>
+      <br />
+      <div className={styles.move21}>
+        <div className={styles.box31}>
+          <div className={styles.smallbox31}></div>
+          <p className={styles.text11}>
+            Archived products <p className={styles.number1}>N/A</p>{" "}
+          </p>{" "}
+        </div>
+      </div>
+      <br />
+      <div className={styles.move21}>
+        <div className={styles.box41}>
+          <div className={styles.smallbox41}></div>
+          <p className={styles.text11}>
+            Quantity On Hand <p className={styles.number1}>{totalOrders}</p>{" "}
+          </p>{" "}
+        </div>
+      </div>
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      {/* Second Row Boxes  with Info */}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Latest sale orders-by sales channel*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      {/*Purchase Orders*/}
+      <br />
 
             <div className={styles.move222}>
                 <div className={styles.box71}>
