@@ -16,7 +16,8 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
     
   });
 
-  // Effect to calculate the total cost of orders and update the state
+  /* Effect to calculate the total cost of orders and update the state
+  */
   useEffect(() => {
     const total = filteredData.reduce((acc, order) => {
       const amount = parseFloat(order.Total.replace(/[^0-9.-]+/g, "")) || 0;
@@ -25,7 +26,8 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
     setTotalCost(total);
   }, [filteredData, setTotalCost]);
 
-  // Effect to filter data based on fulfillment state and update the state
+  /* Effect to filter data based on fulfillment state and update the state
+  */
   useEffect(() => {
     const lowerCaseQuery = searchQuery.toLowerCase();
     const filtered = MOCK_DATA.filter((order) => {
@@ -38,7 +40,8 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
     localStorage.setItem("filteredData", JSON.stringify(filtered)); // Store filtered data in local storage
   }, [searchQuery]);
 
-  // Effect to filter data based on customer name and update the state
+  /* Effect to filter data based on customer name and update the state
+  */
   useEffect(() => {
     const lowerCaseCustomerQuery = customerSearchQuery.toLowerCase();
     const filtered = MOCK_DATA.filter((order) => {
@@ -51,7 +54,9 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
     localStorage.setItem("filteredData", JSON.stringify(filtered)); // Store filtered data in local storage
   }, [customerSearchQuery]);
 
-  // Effect to calculate counts of unfulfilled and fulfilled orders and update the state
+  /* Effect to calculate counts of unfulfilled and fulfilled orders
+   and update the state
+  */
   useEffect(() => {
     const unfulfilledOrders = filteredData.filter((order) => !order["Fulfillment state"]);
     const fulfilledOrders = filteredData.filter((order) => order["Fulfillment state"]);
@@ -64,7 +69,10 @@ function Stock({ setTotalCost, setUnfulfilledCount, setFulfilledCount, setTotalO
     setTotalOrders(filteredData.length);
   }, [filteredData, setUnfulfilledCount, setFulfilledCount, setTotalOrders]);
 
-  // Function to delete a customer order and update the filtered data
+  /* Function to delete a customer order
+   and update the filtered data
+
+  */
   const deleteCustomer = (orderId) => {
     const updatedData = filteredData.filter(order => order.Order_id !== orderId);
     setFilteredData(updatedData);
