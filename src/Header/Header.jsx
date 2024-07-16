@@ -54,10 +54,7 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }) {
           </p>{" "}
         </div>
       </div>
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
+      
       {/* Second Row Boxes  with Info */}
       <br />
       <div className={styles.box11}>
@@ -94,50 +91,11 @@ function Header({ totalCost, unfulfilledCount, fulfilledCount, totalOrders }) {
         </div>
       </div>
       {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}
-      {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
       {/* Second Row Boxes  with Info */} {/* Second Row Boxes  with Info */}{" "}
       {/* Second Row Boxes  with Info */}
       {/*Latest sale orders-by sales channel*/}
       {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Latest sale orders-by sales channel*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
-      {/*Purchase Orders*/}
+   
       <br />
 
             <div className={styles.move222}>
